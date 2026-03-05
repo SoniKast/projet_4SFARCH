@@ -57,7 +57,7 @@ spec:
       containers:
       - name: rocket-ecommerce-main-b-05-03-2026
         image: sonikast1/rocket-ecommerce-main:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         envFrom:
           - configMapRef:
               name: rocket-ecommerce-main-cm-b
