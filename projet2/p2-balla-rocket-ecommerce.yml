@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ecommerce-flask-stripe-svc-b
+  name: rocket-ecommerce-main-svc-b
   labels:
-    app: ecommerce-flask-stripe-svc-b
+    app: rocket-ecommerce-main-svc-b
   namespace: prodv2-b-05-03-2026
 spec:
   type: LoadBalancer
   selector:
-    app: ecommerce-flask-stripe-b-05-03-2026
+    app: rocket-ecommerce-main-b-05-03-2026
   ports:
   - port: 5005
     protocol: TCP
@@ -17,7 +17,7 @@ spec:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: ecommerce-flask-stripe-cm-b
+  name: rocket-ecommerce-main-cm-b
   namespace: prodv2-b-05-03-2026
 data:
   DEMO_MODE: "True"
@@ -26,7 +26,7 @@ data:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: ecommerce-flask-stripe-secret-b
+  name: rocket-ecommerce-main-secret-b
   namespace: prodv2-b-05-03-2026
 type: Opaque
 data:
@@ -36,41 +36,41 @@ data:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ecommerce-flask-stripe-b-05-03-2026
+  name: rocket-ecommerce-main-b-05-03-2026
   labels:
-    app: ecommerce-flask-stripe-b-05-03-2026
+    app: rocket-ecommerce-main-b-05-03-2026
     env: production
     tier: frontend
   namespace: prodv2-b-05-03-2026
 spec:
   selector:
     matchLabels:
-      app: ecommerce-flask-stripe-b-05-03-2026
+      app: rocket-ecommerce-main-b-05-03-2026
   replicas: 3
   template:
     metadata:
       labels:
-        app: ecommerce-flask-stripe-b-05-03-2026
+        app: rocket-ecommerce-main-b-05-03-2026
         env: production
         tier: frontend
     spec:
       containers:
-      - name: ecommerce-flask-stripe-b-05-03-2026
-        image: sonikast1/ecommerce-flask-stripe-1.0.11:latest
+      - name: rocket-ecommerce-main-b-05-03-2026
+        image: sonikast1/rocket-ecommerce-main:latest
         imagePullPolicy: IfNotPresent
         envFrom:
           - configMapRef:
-              name: ecommerce-flask-stripe-cm-b
+              name: rocket-ecommerce-main-cm-b
         env:
           - name: STRIPE_PUBLISHABLE_KEY
             valueFrom:
               secretKeyRef:
-                name: ecommerce-flask-stripe-secret-b
+                name: rocket-ecommerce-main-secret-b
                 key: STRIPE_PUBLISHABLE_KEY
           - name: STRIPE_SECRET_KEY
             valueFrom:
               secretKeyRef:
-                name: ecommerce-flask-stripe-secret-b
+                name: rocket-ecommerce-main-secret-b
                 key: STRIPE_SECRET_KEY
         ports:
         - containerPort: 5005
