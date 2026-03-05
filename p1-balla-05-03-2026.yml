@@ -1,0 +1,126 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: prod-b-05-03-2026
+  labels:
+    name: prod-b-05-03-2026
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: django-adminlte-svc-b
+  labels:
+    app: django-adminlte-svc-b
+  namespace: prod-b-05-03-2026
+spec:
+  type: ClusterIP
+  selector:
+    app: django-adminlte-b-05-03-2026
+  ports:
+  - port: 5005
+    protocol: TCP
+    targetPort: 5005
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-adminlte-b-05-03-2026
+  labels:
+    app: django-adminlte-b-05-03-2026
+  namespace: prod-b-05-03-2026
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: django-adminlte-b-05-03-2026
+  template:
+    metadata:
+      labels:
+        app: django-adminlte-b-05-03-2026
+    spec:
+      containers:
+      - name: django-adminlte-b-05-03-2026
+        imagePullPolicy: IfNotPresent
+        image: sonikast1/django-adminlte:latest
+        ports:
+        - containerPort: 5005
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: django-star-admin-svc-b
+  labels:
+    app: django-star-admin-svc-b
+  namespace: prod-b-05-03-2026
+spec:
+  type: NodePort
+  selector:
+    app: django-star-admin-b-05-03-2026
+  ports:
+  - port: 5005
+    protocol: TCP
+    targetPort: 5005
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-star-admin-b-05-03-2026
+  labels:
+    app: django-star-admin-b-05-03-2026
+  namespace: prod-b-05-03-2026
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: django-star-admin-b-05-03-2026
+  template:
+    metadata:
+      labels:
+        app: django-star-admin-b-05-03-2026
+    spec:
+      containers:
+      - name: django-star-admin-b-05-03-2026
+        imagePullPolicy: IfNotPresent
+        image: sonikast1/django-star-admin:v2
+        ports:
+        - containerPort: 5005
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ecommerce-flask-stripe-svc-b
+  labels:
+    app: ecommerce-flask-stripe-svc-b
+  namespace: prod-b-05-03-2026
+spec:
+  type: LoadBalancer
+  selector:
+    app: ecommerce-flask-stripe-b-05-03-2026
+  ports:
+  - port: 5005
+    protocol: TCP
+    targetPort: 5005
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-flask-stripe-b-05-03-2026
+  labels:
+    app: ecommerce-flask-stripe-b-05-03-2026
+  namespace: prod-b-05-03-2026
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ecommerce-flask-stripe-b-05-03-2026
+  template:
+    metadata:
+      labels:
+        app: ecommerce-flask-stripe-b-05-03-2026
+    spec:
+      containers:
+      - name: ecommerce-flask-stripe-b-05-03-2026
+        imagePullPolicy: IfNotPresent
+        image: sonikast1/ecommerce-flask-stripe:latest
+        ports:
+        - containerPort: 5005
