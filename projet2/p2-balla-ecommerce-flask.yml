@@ -18,6 +18,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: ecommerce-flask-stripe-cm-b
+  namespace: prodv2-b-05-03-2026
 data:
   DEMO_MODE: "True"
   DEBUG: "True"
@@ -26,6 +27,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: ecommerce-flask-stripe-secret-b
+  namespace: prodv2-b-05-03-2026
 type: Opaque
 data:
   STRIPE_PUBLISHABLE_KEY: cGtfdGVzdF81MVQ2dmZXQ3VxVW1TS1pWdGJ0MndWdDFOVEFmZTVYd1dURGtCQXBnOWp3dFVWSUxubzdzclRoZHB2Smt2cnljVFpJZHZjdGpvN2ZSbWRwTUNHdjVLUHQ4ODAwbHJ4eTZEUXc=
@@ -34,7 +36,7 @@ data:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ecommerce-flask-stripe-b-deployment
+  name: ecommerce-flask-stripe-b-05-03-2026
   labels:
     app: ecommerce-flask-stripe-b-05-03-2026
     env: production
