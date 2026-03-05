@@ -121,6 +121,6 @@ spec:
       containers:
       - name: ecommerce-flask-stripe-b-05-03-2026
         imagePullPolicy: IfNotPresent
-        image: sonikast1/ecommerce-flask-stripe:latest
+        image: sonikast1/ecommerce-flask-stripe-1.0.11:latest
         ports:
         - containerPort: 5005
