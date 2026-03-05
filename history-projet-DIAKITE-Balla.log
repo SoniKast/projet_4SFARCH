@@ -1,0 +1,444 @@
+    1  cd priv-rocket-ecommerce-main/
+    2  docker-compose up --build
+    3  docker-compose --up build
+    4  sudo apt install docker-compose
+    5  docker-compose up --build
+    6  df -h
+    7  docker system df
+    8  docker system prune -a -f
+    9  docker volume prune -f
+   10  docker builder prune -a -f
+   11  docker-compose up --build
+   12  docker system prune -a -f
+   13  docker-compose up --build
+   14  docker system prune -a -f
+   15  docker-compose up --build
+   16  docker system prune -a -f
+   17  docker-compose up --build
+   18  docker compose 
+   19  docker compose version
+   20  sudo apt remove docker-compose
+   21  docker compose up --build
+   22  docker system prune -a -f
+   23  docker compose up --build
+   24  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+   25  sudo dpkg -i minikube_latest_amd64.deb
+   26  docker system prune -a -f
+   27  sudo dpkg -i minikube_latest_amd64.deb
+   28  minikube config defaults kubernetes-version
+   29  minikube start --listen-address=0.0.0.0 --memory=max --cpus=max --kubernetes-version=v1.35.0
+   30  minikube delete
+   31  minikube start --listen-address=0.0.0.0 --memory=max --cpus=max --kubernetes-version=v1.35.0
+   32  multipass stop mydocker
+   33  multipass stop local.mydocker
+   34  exit
+   35  df -h
+   36  minikube delete
+   37  minikube start --listen-address=0.0.0.0 --memory=max --cpus=max --kubernetes-version=v1.35.0
+   38  minikube logs --file=logs.txt
+   39  minikube delete --purge
+   40  minikube start --listen-address=0.0.0.0 --memory=max --cpus=max --kubernetes-version=v1.35.0
+   41  minikube kubectl cluster-info
+   42  minikube status
+   43  kubectl version
+   44  minikube ip
+   45  nano .bashrc
+   46  k get all
+   47  minikube addons enable ingress
+   48  minikube addons enable metrics-server
+   49  k get svc
+   50  k run mynginx --image nginx:alpine-slim
+   51  k get pod
+   52  k get pod -o wide
+   53  curl -I 10.244.0.7
+   54  minikube ssh
+   55  k delete pod mynginx
+   56  k create deployment mynginxdeployment --image nginx:alpine-slim
+   57  k get deployments.apps
+   58  k describe deployments.apps
+   59  sudo apt upgrade
+   60  kubectl create deployment nginx-deployment
+   61  k get all
+   62  192.168.49.1
+   63  k get all
+   64  minikube status
+   65  minikube start
+   66  minikube start --listen-address=0.0.0.0 --memory=max --cpus=max --kubernetes-version=v1.35.0
+   67  minikube status
+   68  kubectl create deployment nginx-deployment --image=nginx
+   69  k get all
+   70  k expose deployment mynginx-deployment --type=NodePort --port=80
+   71  k expose deployment mynginxdeployment --type=NodePort --port=80
+   72  k get all
+   73  curl -I 10.101.162.63
+   74  minikube ssh
+   75  k get pod mynginxdeployment
+   76  k get mynginxdeployment
+   77  k get all
+   78  k get pod/mynginxdeployment-79cfff6d85-fq95q
+   79  k get pod
+   80  k describe service mynginxdeployment
+   81  minikube ssh
+   82  k describe pod mynginxdeployment
+   83  minikube ssh
+   84  k expose deployment mynginxdeployment --type=NodePort --port=80
+   85  k port-forward --address 0.0.0.0 services/mynginxdeployment 8080:80
+   86  k get svc
+   87  k get nodes
+   88  k delete all
+   89  k delete --all
+   90  k delete all --all
+   91  k create -f mynginxpod.yaml
+   92  minikube ssh
+   93  k describe pod nginx
+   94  minikube ssh
+   95  k delete -f mynginxprod.yaml
+   96  k delete -f mynginxpod.yaml
+   97  k create -f mynginxpod.yaml
+   98  k get pod -l app=nginx
+   99  k create -f mynginxpod.yaml
+  100  k delete all --all
+  101  k create -f mynginxpod.yaml
+  102  k get svc
+  103  k port-forward --address 0.0.0.0 services/flask-service 5000:80
+  104  k port-forward --address 0.0.0.0 services/flask-service 5000
+  105  k wait -n istio-system --for=condition=ready pod --all 
+  106  k wait -n flask-service --for=condition=ready pod --all 
+  107  k port-forward --address 0.0.0.0 services/flask-service 5000:5000
+  108  k get pods
+  109  k get pods o -wide
+  110  k get pods -o wide
+  111  k delete all --all
+  112  k create -f mynginxpod.yaml
+  113  k get pods
+  114  k delete all --all
+  115  k create -f mynginxpod.yaml
+  116  k get pods
+  117  k delete all --all
+  118  k create -f mynginxpod.yaml
+  119  k get pods
+  120  k delete all --all
+  121  cd django-datta-able-1.0.51/
+  122  docker build -t sonikast1/django-datta-able:latest
+  123  docker build -t sonikast1/django-datta-able:latest .
+  124  docker build -t your-dockerhub-username/django-datta-able:latest .
+  125  docker build -t sonikast1/django-datta-able:latest .
+  126  cd django-datta-able-1.0.51/
+  127  docker build -t sonikast1/django-datta-able:latest .
+  128  docker login
+  129  docker push sonikast1/django-datta-able:latest
+  130  cd ..
+  131  k create -f mynginxpod.yaml
+  132  minikube start
+  133  k create -f mynginxpod.yaml
+  134  k get pods
+  135  k get svc
+  136  k get pods
+  137  k get svc
+  138  k get all
+  139  minikube ssh
+  140  k get all
+  141  minikube ssh
+  142  k apply -f https://k8s.io/examples/application/deployment.yaml
+  143  k describe deployment nginx-deployment
+  144  k get pods -l app=nginx
+  145  k describe pod nginx-deploymentt-77bc6bd484-dvcc5
+  146  k describe pod nginx-deployment-77bc6bd484-dvcc5
+  147  k apply -f https://k8s.io/examples/application/deployment-update.yaml
+  148  k get pods -l app=nginx
+  149  k apply -f https://k8s.io/examples/application/deployment-scale.yaml
+  150  k get pods -l app=nginx
+  151  k delete deployment nginx-deployment
+  152  k apply -f https://k8s.io/examples/application/guestbook/redis-leader-deployment.yaml
+  153  k get pods
+  154  k logs -f deployment/redis-leader
+  155  k apply -f https://k8s.io/examples/application/guestbook/redis-leader-service.yaml
+  156  k get service
+  157  k apply -f https://k8s.io/examples/application/guestbook/redis-follower-deployment.yaml
+  158  k get pods
+  159  k apply -f https://k8s.io/examples/application/guestbook/redis-follower-service.yaml
+  160  k get service
+  161  k apply -f https://k8s.io/examples/application/guestbook/frontend-deployment.yaml
+  162  k get pods -l app=guestbook -l tier=frontend
+  163  k apply -f https://k8s.io/examples/application/guestbook/frontend-service.yaml
+  164  k get services
+  165  k port-forward svc/frontend 8080:80
+  166  k get service frontend
+  167  minikube start
+  168  k get all
+  169  k port-forward svc/frontend 8080:80
+  170  k apply -f https://k8s.io/examples/application/guestbook/redis-leader-deployment.yaml
+  171  k get pods
+  172  k logs -f deployment/redis-leader
+  173  k apply -f https://k8s.io/examples/application/guestbook/redis-leader-service.yaml
+  174  k get service
+  175  k apply -f https://k8s.io/examples/application/guestbook/redis-follower-deployment.yaml
+  176  k get pods
+  177  k apply -f https://k8s.io/examples/application/guestbook/redis-follower-service.yaml
+  178  k get service
+  179  k apply -f https://k8s.io/examples/application/guestbook/frontend-deployment.yaml
+  180  k get pods -l app=guestbook -l tier=frontend
+  181  k apply -f https://k8s.io/examples/application/guestbook/frontend-service.yaml
+  182  k get services
+  183  k port-forward svc/frontend 8080:80
+  184  minikube ssh
+  185  k port-forward svc/frontend 8080:80
+  186  k get service frontend
+  187  k get services
+  188  k apply -f deployment.yaml
+  189  k get services
+  190  k port-forward svc/frontend 8080:80
+  191  k apply -f deployment.yaml
+  192  k get services
+  193  k describe service frontend
+  194  k get services
+  195  k port-forward svc/frontend 8080:80
+  196  k scale deployment frontend --replicas=5
+  197  k get pods
+  198  k delete deployment -l app=redis
+  199  k delete service -l app=redis
+  200  k delete deployment frontend
+  201  k delete service frontend
+  202  k get pods
+  203  k apply -f https://k8s.io/examples/controllers/nginx-deployment.yaml
+  204  k get deployments
+  205  k rollout status deployment/nginx-deployment
+  206  k get rs
+  207  k set image deployment.v1.apps/nginx-deployment nginx=nginx:1.16.1
+  208  k rollout status deployment/nginx-deployment
+  209  k get rs
+  210  k get pods
+  211  k describe deployments
+  212  k set image deployment/nginx-deployment nginx=nginx:1.161
+  213  k rollout status deployment/nginx-deployment
+  214  k get rs
+  215  k get pods
+  216  k describe deployment
+  217  k rollout history deployment/nginx-deployment
+  218  k rollout history deployment/nginx-deployment --revision=2
+  219  k rollout undo deployment/nginx-deployment
+  220  k get deployment nginx-deployment
+  221  k describe deployment nginx-deployment
+  222  k scale deployment/nginx-deployment --replicas=10
+  223  k autoscale deployment/nginx-deployment --min=10 --max=15 --cpu-percent=80
+  224  k get deploy
+  225  k set image deployment/nginx-deployment nginx=nginx:sometag
+  226  k get rs
+  227  k get deploy
+  228  k get rs
+  229  k rollout pause deployment/nginx-deployment
+  230  k set image deployment/nginx-deployment nginx=nginx:1.16.1
+  231  k rollout history deployment/nginx-deployment
+  232  k get rs
+  233  k set resources deployment/nginx-deployment -c=nginx --limits=cpu=200m,memory=512Mi
+  234  k rollout resume deployment/nginx-deployment
+  235  k get rs --watch
+  236  k get rs
+  237  k rollout status deployment/nginx-deployment
+  238  echo $?
+  239  k patch deployment/nginx-deployment -p '{"spec":{"progressDeadlineSeconds":600}}'
+  240  k describe deployment nginx-deployment
+  241  echo $?
+  242  k delete all
+  243  k delete all --all
+  244  cd django-adminlte-1.0.27/
+  245  docker build -t sonikast1/django-adminlte:latest .
+  246  docker login
+  247  docker push  sonikast1/django-adminlte:latest
+  248  cd ..
+  249  cd django-star-admin-1.0.7
+  250  docker build -t sonikast1/django-star-admin
+  251  docker build -t sonikast1/django-star-admin:latest .
+  252  docker push sonikast1/django-star-admin:latest
+  253  cd ..
+  254  cd ecommerce-flask-stripe-1.0.11/
+  255  docker build -t sonikast1/ecommerce-flask-stripe-1.0.11:latest .
+  256  docker push sonikast1/ecommerce-flask-stripe:latest
+  257  docker push sonikast1/ecommerce-flask-stripe-1.0.11:latest
+  258  minikube start
+  259  k create -f ./tpminikube
+  260  minikube delete --all
+  261  minikube start
+  262  k get all
+  263  k create -f ./tpminikube
+  264  k delete --all
+  265  k get all
+  266  k create -f ./tpminikube
+  267  k get all
+  268  k get service
+  269  k get deployments
+  270  k get deployment
+  271  k get namespacez
+  272  k get namespace
+  273  k get pods -n preprod
+  274  k delete namespaces preprod
+  275  k get pods -n preprod
+  276  k create -f ./tpminikube
+  277  k get all
+  278  k get all -n preprod
+  279  k port-forward --adrress 0.0.0.0 services/django-adminlte-service 5005:5005
+  280  k port-forward --address 0.0.0.0 services/django-adminlte-service 5005:5005
+  281  k port-forward --address 0.0.0.0 --as preprod services/django-adminlte-service 5005:5005 
+  282  k port-forward --address 0.0.0.0 --n preprod services/django-adminlte-service 5005:5005 
+  283  k port-forward --address 0.0.0.0 -n preprod services/django-adminlte-service 5005:5005 
+  284  k port-forward --address 0.0.0.0 -n preprod services/django-star-service 5006:5006 
+  285  k port-forward --address 0.0.0.0 -n preprod services/ecommerce-flask-service 5007:5007
+  286  k get all -n preprod
+  287  k port-forward --address 0.0.0.0 -n preprod services/ecommerce-flask-service 5007:5007
+  288  k apply -f ./tpminikube
+  289  cd tpminikube/
+  290  k apply -f ecommerce-flask-stripe
+  291  k apply -f ecommerce-flask-stripe.yaml
+  292  k apply ecommerce-flask-stripe.yaml
+  293  k apply -f ecommerce-flask-stripe.yaml
+  294  k apply -f django-star-admin.yaml
+  295  k apply -f ecommerce-flask-stripe.yaml
+  296  k apply -f django-star-admin.yaml
+  297  k get all -n preprod
+  298  k api-resources --namespaced=true
+  299  cd ..
+  300  k port-forward --address 0.0.0.0 --n preprod services/django-adminlte-service 5005:5005 
+  301  k port-forward --address 0.0.0.0 -n preprod services/django-adminlte-service 5005:5005 
+  302  k port-forward --address 0.0.0.0 -n preprod services/django-star-service 5005:30500 
+  303  k port-forward --address 0.0.0.0 -n preprod services/django-star-service 5005:5005
+  304  k port-forward --address 0.0.0.0 -n preprod services/django-star-service 5006:5006
+  305  cd tpminikube/
+  306  k apply -f django-star-admin.yaml
+  307  k apply -f ecommerce-flask-stripe.yaml
+  308  cd ..
+  309  k get all -n preprod
+  310  k port-forward --address 0.0.0.0 -n preprod services/django-star-service 5006:5006
+  311  cd tpminikube/
+  312  k apply -f django-star-admin.yaml
+  313  k apply -f ecommerce-flask-stripe.yaml
+  314  cd ..
+  315  k port-forward --address 0.0.0.0 -n preprod services/django-star-service 5005:5005
+  316  cd django-star-admin
+  317  docker run
+  318  docker start
+  319  docker build -:latest
+  320  docker build -t django-star-admin
+  321  docker build -t django-star-admin .
+  322  cd ..
+  323  k port-forward --address 0.0.0.0 -n preprod services/ecommerce-flask-service 5005:5005
+  324  cd django-star-admin/
+  325  docker build -t django-star-admin .
+  326  docker build -t sonikast1/django-star-admin:latest .
+  327  docker push sonikast1/django-star-admin:latest
+  328  cd ..
+  329  cd tpminikube/
+  330  k apply -f django-star-admin.yaml
+  331  k delete namespaces preprod
+  332  cd ..
+  333  k create -f ./tpminikube
+  334  k port-forward --address 0.0.0.0 -n preprod services/django-star-service 5005:5005
+  335  k get all -n preprod
+  336  k port-forward --address 0.0.0.0 -n preprod services/django-star-service 5005:5005
+  337  k delete namespaces preprod
+  338  cd django-star-admin/
+  339  docker build -t sonikast1/django-star-admin:latest
+  340  docker build sonikast1/django-star-admin:latest
+  341  docker build -t sonikast1/django-star-admin:latest .
+  342  docker push sonikast1/django-star-admin:latest
+  343  cd ..
+  344  k create -f ./tpminikube
+  345  k port-forward --address 0.0.0.0 -n preprod services/django-star-service 5005:5005
+  346  cd tpminikube/
+  347  k apply -f django-star-admin.yaml
+  348  cd ..
+  349  k port-forward --address 0.0.0.0 -n preprod services/django-star-service 5005:5005
+  350  cd ..
+  351  cd tpminikube/
+  352  ls
+  353  cd ubuntu
+  354  cd tpminikube/
+  355  k apply -f django-star-admin.yaml
+  356  cd ..
+  357  cd django-star-admin/
+  358  docker build -t sonikast1/django-star-admin:latest .
+  359  cd ..
+  360  cd tpminikube/
+  361  k apply -f django-star-admin.yaml
+  362  cd ..
+  363  k port-forward --address 0.0.0.0 -n preprod services/django-star-service 5005:5005
+  364  cd django-star-admin/
+  365  docker push sonikast1/django-star-admin
+  366  cd ..
+  367  cd tpminikube/
+  368  cd ..
+  369  k rollout restart deployment django-star-admin -n preprod
+  370  k port-forward --address 0.0.0.0 -n preprod services/django-star-service 5005:5005
+  371  cd django-star-admin/
+  372  docker build -t sonikast1/django-star-admin:v1 .
+  373  django push sonikast1/django-star-admin:v1
+  374  docker push sonikast1/django-star-admin:v1
+  375  docker build -t sonikast1/django-star-admin:v2 .
+  376  docker push sonikast1/django-star-admin:v2
+  377  cd ..
+  378  k rollout restart deployment django-star-admin -n preprod
+  379  k port-forward --address 0.0.0.0 -n preprod services/django-star-service 5005:5005
+  380  k rollout restart deployment django-star-admin -n preprod
+  381  k port-forward --address 0.0.0.0 -n preprod services/django-star-service 5005:5005
+  382  k delete namespaces preprod
+  383  k create -f ./tpminikube
+  384  k port-forward --address 0.0.0.0 -n preprod services/django-star-service 5005:5005
+  385  k delete --all -n preprod
+  386  k delete --all 
+  387  k delete all -n preprod
+  388  k delete -n preprod all
+  389  k delete namespaces preprod$
+  390  k delete namespaces preprod
+  391  k create -f ./tpminikube
+  392  k get all
+  393  k get all --all-namespaces
+  394  k delete namespaces
+  395  k delete namespaces prod
+  396  k delete namespaces preprod
+  397  k delete namespaces dev
+  398  k apply -k ./wordpress
+  399  k get secrets
+  400  k get pvc
+  401  k get pods
+  402  k get services wordpress
+  403  k service wordpress --url
+  404  minikube service wordpress --url
+  405  k port-forward --address 0.0.0.0 service/wordpress 
+  406  k port-forward --address 0.0.0.0 services/wordpress 
+  407  k port-forward --address 0.0.0.0 services/wordpress 32241:32241
+  408  k port-forward --address 0.0.0.0 services/wordpress 32241
+  409  k port-forward --address 0.0.0.0 services/wordpress 80:80
+  410  k delete --all
+  411  k delete all
+  412  k delete -all
+  413  k delete --help
+  414  k delete --all
+  415  git clone https://github.com/SoniKast/projet_4SFARCH.git
+  416  k get all
+  417  minikube start
+  418  k get all
+  419  k delete all
+  420  k delete --all
+  421  k delete -all
+  422  k delete --all
+  423  k delete --purge --all
+  424  kubectl delete all --all --all-namespaces
+  425  cd projet_4SFARCH
+  426  k create -f p1-balla-05-03-2026.yml
+  427  k get all
+  428  k get all -n prod-b-05-03-2026
+  429  git config user.name sonikast
+  430  git config user.email sonikast@hotmail.com
+  431  git push
+  432  k get all -n prod-b-05-03-2026
+  433  k port-forward --address 0.0.0.0 service/django-adminlte-b-05-03-2026 5005:5005
+  434  k port-forward --address 0.0.0.0 service/django-adminlte-svc-b 5005:5005
+  435  k port-forward --address 0.0.0.0 -n prod-b-05-03-2026 services/django-adminlte-svc-b 5005:5005
+  436  k port-forward --address 0.0.0.0 -n prod-b-05-03-2026 services/django-star-admin-svc-b 5005:5005
+  437  k port-forward --address 0.0.0.0 -n prod-b-05-03-2026 services/ecommerce-flask-stripe-svc-b 5005:5005
+  438  k get all -n prod-b-05-03-2026
+  439  k create -f p1-balla-05-03-2026.yml
+  440  k apply -f p1-balla-05-03-2026.yml
+  441  k get all -n prod-b-05-03-2026
+  442  k port-forward --address 0.0.0.0 -n prod-b-05-03-2026 services/ecommerce-flask-stripe-svc-b 5005:5005
+  443  history
+  444  history > history-projet-DIAKITE-Balla.log
