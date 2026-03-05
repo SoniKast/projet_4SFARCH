@@ -1,0 +1,30 @@
+  415  git clone https://github.com/SoniKast/projet_4SFARCH.git
+  416  k get all
+  417  minikube start
+  418  k get all
+  419  k delete all
+  420  k delete --all
+  421  k delete -all
+  422  k delete --all
+  423  k delete --purge --all
+  424  kubectl delete all --all --all-namespaces
+  425  cd projet_4SFARCH
+  426  k create -f p1-balla-05-03-2026.yml
+  427  k get all
+  428  k get all -n prod-b-05-03-2026
+  429  git config user.name sonikast
+  430  git config user.email sonikast@hotmail.com
+  431  git push
+  432  k get all -n prod-b-05-03-2026
+  433  k port-forward --address 0.0.0.0 service/django-adminlte-b-05-03-2026 5005:5005
+  434  k port-forward --address 0.0.0.0 service/django-adminlte-svc-b 5005:5005
+  435  k port-forward --address 0.0.0.0 -n prod-b-05-03-2026 services/django-adminlte-svc-b 5005:5005
+  436  k port-forward --address 0.0.0.0 -n prod-b-05-03-2026 services/django-star-admin-svc-b 5005:5005
+  437  k port-forward --address 0.0.0.0 -n prod-b-05-03-2026 services/ecommerce-flask-stripe-svc-b 5005:5005
+  438  k get all -n prod-b-05-03-2026
+  439  k create -f p1-balla-05-03-2026.yml
+  440  k apply -f p1-balla-05-03-2026.yml
+  441  k get all -n prod-b-05-03-2026
+  442  k port-forward --address 0.0.0.0 -n prod-b-05-03-2026 services/ecommerce-flask-stripe-svc-b 5005:5005
+  443  history
+  444  history > history-projet-DIAKITE-Balla.log
