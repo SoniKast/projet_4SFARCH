@@ -1,0 +1,74 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ecommerce-flask-stripe-svc-b
+  labels:
+    app: ecommerce-flask-stripe-svc-b
+  namespace: prodv2-b-05-03-2026
+spec:
+  type: LoadBalancer
+  selector:
+    app: ecommerce-flask-stripe-b-05-03-2026
+  ports:
+  - port: 5005
+    protocol: TCP
+    targetPort: 5005
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ecommerce-flask-stripe-cm-b
+data:
+  DEMO_MODE: "True"
+  DEBUG: "True"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ecommerce-flask-stripe-secret-b
+type: Opaque
+data:
+  STRIPE_PUBLISHABLE_KEY: cGtfdGVzdF81MVQ2dmZXQ3VxVW1TS1pWdGJ0MndWdDFOVEFmZTVYd1dURGtCQXBnOWp3dFVWSUxubzdzclRoZHB2Smt2cnljVFpJZHZjdGpvN2ZSbWRwTUNHdjVLUHQ4ODAwbHJ4eTZEUXc=
+  STRIPE_SECRET_KEY: c2tfdGVzdF81MVQ2dmZXQ3VxVW1TS1pWdDJhSTJDMVpaS0ZQR2xUaVljWldQbE13SUtLZFJrY0FxbXB4VnZUWDVkSVU1OG9wc2RTWkVIdlJ5alAxVDhHNU9WMjZ3djcxRzAwS1JvWVNNV3U=
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-flask-stripe-b-deployment
+  labels:
+    app: ecommerce-flask-stripe-b-05-03-2026
+    env: production
+    tier: frontend
+  namespace: prodv2-b-05-03-2026
+spec:
+  selector:
+    matchLabels:
+      app: ecommerce-flask-stripe-b-05-03-2026
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: ecommerce-flask-stripe-b-05-03-2026
+        env: production
+        tier: frontend
+    spec:
+      containers:
+      - name: ecommerce-flask-stripe-b-05-03-2026
+        image: sonikast1/ecommerce-flask-stripe-1.0.11:latest
+        imagePullPolicy: IfNotPresent
+        envFrom:
+          - configMapRef:
+              name: ecommerce-flask-stripe-cm-b
+        env:
+          - name: STRIPE_PUBLISHABLE_KEY
+            valueFrom:
+              secretKeyRef:
+                name: ecommerce-flask-stripe-secret-b
+                key: STRIPE_PUBLISHABLE_KEY
+          - name: STRIPE_SECRET_KEY
+            valueFrom:
+              secretKeyRef:
+                name: ecommerce-flask-stripe-secret-b
+                key: STRIPE_SECRET_KEY
+        ports:
+        - containerPort: 5005
