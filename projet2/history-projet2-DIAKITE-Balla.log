@@ -1,0 +1,83 @@
+  446  k create -f ./projet2
+  447  k get all -n prodv2-b-05-03-2026
+  448  k apply -f ./projet2
+  449  k get all -n prodv2-b-05-03-2026
+  450  k describe pod ecommerce-flask-stripe-b-deployment-6996f6575f-4xnll
+  451  k describe pod ecommerce-flask-stripe-b-deployment-6996f6575f-4xnll -n prodv2-b-05-03-2026
+  452  k apply -f ./projet2
+  453  k get all -n prodv2-b-05-03-2026
+  454  k describe pod ecommerce-flask-stripe-b-05-03-2026-6996f6575f-nfhbc -n prodv2-b-05-03-2026
+  455  k apply -f ./projet2
+  456  k get all -n prodv2-b-05-03-2026
+  457  k delete all -n prodv2-b-05-0-2
+  458  k delete all -n prodv2-b-05-03-2026
+  459  k delete --all -n prodv2-b-05-03-2026
+  460  k delete -n prodv2-b-05-03-2026 --all 
+  461  k delete namespaces prodv2-b-05-03-2026
+  462  k create -f ./projet2
+  463  k apply -f ./projet2
+  464  k get all -n prodv2-b-05-03-2026
+  465  k portforward --address 0.0.0.0 -n prodv2-b-05-03-2026 service/ecommerce-flask-stripe-svc-b 
+  466  k port-forward --address 0.0.0.0 -n prodv2-b-05-03-2026 service/ecommerce-flask-stripe-svc-b 5005:5005
+  467  k delete namespaces prodv2-b-05-03-2026
+  468  cd ..
+  469  cd priv-rocket-ecommerce-main/
+  470  docker build -t sonikast1/rocket-ecommerce-main:latest .
+  471  docker push sonikast1/rocket-ecommerce-main:latest
+  472  cd ..
+  473  cd projet_4SFARCH/
+  474  k create -f ./projet2
+  475  k apply -f ./projet2
+  476  tree 
+  477  tree -d 
+  478  sudo apt install tree
+  479  tree -d
+  480  tree -d /projet2
+  481  tree
+  482  k apply -f ./projet2
+  483  k apply -f ./projet2 --validate=false
+  484  k apply -f ./projet2
+  485  k get all -n prodv2-b-05-03-2026
+  486  k apply -f ./projet2
+  487  k get all -n prodv2-b-05-03-2026
+  488  k delete namespaces prodv2-b-05-03-2026
+  489  k create -f ./projet2
+  490  k get all -n prodv2-b-05-03-2026
+  491  cd ..
+  492  cd priv-rocket-ecommerce-main/
+  493  docker build -t sonikast1/rocket-ecommerce-main:latest
+  494  docker build -t sonikast1/rocket-ecommerce-main:latest .
+  495  docker push sonikast1/rocket-ecommerce-main:latest
+  496  cd ..
+  497  cd projet_4SFARCH
+  498  k apply -f ./projet2
+  499  k get all -n prodv2-b-05-03-2026
+  500  k port-forward --address 0.0.0.0 -n prodv2-b-05-03-2026 service/rocket-ecommerce-main-svc-b 5005:5005
+  501  k get all -n prodv2-b-05-03-2026
+  502  exec -it pod/rocket-ecommerce-main-b-05-03-2026-6c89df8bfc-6szpd -n prodv2-b-05-03-2026 -- nslookup api.stripe.com
+  503  k exec -it pod/rocket-ecommerce-main-b-05-03-2026-6c89df8bfc-6szpd -n prodv2-b-05-03-2026 -- nslookup api.stripe.com
+  504  kubectl rollout restart deployment coredns -n kube-system
+  505  kubectl rollout restart minikube addons disable corednsdeployment coredns -n kube-system
+  506  minikube addons disable coredns
+  507  minikube addons enable coredns
+  508  minikube stop
+  509  minikube delete
+  510  minikube start
+  511  minikube kubectl -- get pods -A
+  512  k
+  513  k create -f ./projet2
+  514  k get all -n prodv2-b-05-03-2026
+  515  k port-forward --address 0.0.0.0 -n prodv2-b-05-03-2026 service/rocket-ecommerce-main-svc-b 5005:5005
+  516  cd ..
+  517  cd projet_4SFARCH/
+  518  docker logs rocket-ecommerce >
+  519  history-projet-DIAKITE-Balla-docker-conteneur-X.log
+  520  docker ps command
+  521  docker ps command ls
+  522  docker ps command -ls
+  523  docker ps command -ls -a
+  524  docker ps command ls -a
+  525  docker ps 
+  526  history >
+  527  history-projet2-DIAKITE-Balla.log
+  528  history > history-projet2-DIAKITE-Balla.log
